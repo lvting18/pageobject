@@ -20,7 +20,9 @@ class SearchPage(BasePage):
     def searchUser(self, key):
         self.search(key)
         self.findByText("用户").click()
-        follow_button = (By.XPATH, "//*[@text='"+key+"']/../..//*[contains(@resource-id, 'follow_btn')]")
+        follow_button = (By.XPATH, "//*[@text='"+key+"']/../..//*[contains(@resource-id, 'follow')]")
         status = self.find(follow_button).text
-        print(status)
-        # return "已关注" in status
+        return "已关注" in status
+
+    def cancelSearch(self):
+        self.findByText("取消").click()
