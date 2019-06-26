@@ -6,7 +6,17 @@ from page_object.driver.AndroidClient import AndroidClient
 
 class BasePage(object):
     def __init__(self):
-        self.driver = AndroidClient.driver
+        self.driver = self.getClient().driver
+        # self.driver = self.getDriver()
+
+    # @classmethod
+    # def getDriver(cls):
+    #     cls.driver = AndroidClient.driver
+    #     return cls.driver
+
+    @classmethod
+    def getClient(cls):
+        return AndroidClient
 
     def find(self, kv) -> WebElement:
         return self.driver.find_element(*kv)

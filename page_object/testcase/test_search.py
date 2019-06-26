@@ -8,7 +8,7 @@ class TestPrice(object):
 
     @classmethod
     def setup_class(cls):
-        cls.mainPage = App.openmain()
+        cls.mainPage = App.homepage()
 
     def setup_method(self):
         self.mainPage: MainPage = TestPrice.mainPage
