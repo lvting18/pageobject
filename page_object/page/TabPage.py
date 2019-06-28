@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from page_object.driver.AndroidClient import AndroidClient
+from page_object.driver.Client import Client
 from page_object.page.BasePage import BasePage
 
 
