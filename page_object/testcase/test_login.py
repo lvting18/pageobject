@@ -1,6 +1,7 @@
 from page_object.page.App import App
 import pytest
 
+
 class TestLogin(object):
     @classmethod
     def setup_class(cls):
